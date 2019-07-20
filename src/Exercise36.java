@@ -23,7 +23,7 @@ public class Exercise36 {
                 break;
             }
 
-            // if user did not enter -1, this is where we stop.
+            // if user did not enter -1, this is where we continue.
             sum = sum+number;
             count = count+1;
 
