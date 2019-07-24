@@ -1,19 +1,5 @@
 public class Exercise40 {
 
-
-    public static void stars(int amount) {
-        System.out.print("*");
-    }
-
-    //40.1
-    private static void printStars(int amount) {
-        int i = 0;
-        while (i < amount) {
-            stars(amount);
-            i = i+1;
-        }
-    }
-
     //40.1
     private static void printWhiteSpaces(int size) {
         int i = 0;
@@ -29,7 +15,7 @@ public class Exercise40 {
         int space = size;
         while (i <= size) {
             printWhiteSpaces(space);
-            printStars(i);
+            Exercise39.printStars(i);
             System.out.println();
             i = i+1;
             space = space-1;
@@ -44,7 +30,7 @@ public class Exercise40 {
         int space = size;
         while (i <= size) {
             printWhiteSpaces(space);
-            printStars(i);
+            Exercise39.printStars(i);
             System.out.println();
             i = i+2; //makes it centered
             space = space-1; //spaces it to the center
@@ -53,7 +39,7 @@ public class Exercise40 {
         int s = 0;
         while (s < 2){
             printWhiteSpaces(size-1);
-            printStars(3);
+            Exercise39.printStars(3);
             s = s+1;
             System.out.println();
         }
@@ -62,8 +48,9 @@ public class Exercise40 {
 
 
     public static void main(String[] args) {
-
-        printXmasTree(10);
+        //printWhiteSpaces(5);
+        printTriangle(4);
+        //printXmasTree(10);
     }
 
 

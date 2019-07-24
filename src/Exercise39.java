@@ -1,6 +1,6 @@
 public class Exercise39 {
 
-    private static void stars(int amount) {
+    public static void stars(int amount) {
         System.out.print("*");
     }
 
