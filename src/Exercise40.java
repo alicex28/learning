@@ -12,7 +12,7 @@ public class Exercise40 {
     //40.2
     public static void printTriangle(int size) {
         int i = 1;
-        int space = size;
+        int space = size-1;
         while (i <= size) {
             printWhiteSpaces(space);
             Exercise39.printStars(i);
@@ -26,19 +26,29 @@ public class Exercise40 {
     //40.3
     // looks like an xmas tree, but not sure to keep making it loop so it repeats 10x rather than the last line being 10 stars
     public static void printXmasTree(int size) {
+
+        // size == max height of the tree
+        // i == the current height of the tree
         int i = 1;
-        int space = size;
+        int stars = 1;
+        int space = size-1;
+
         while (i <= size) {
             printWhiteSpaces(space);
-            Exercise39.printStars(i);
+            Exercise39.printStars(stars);
             System.out.println();
-            i = i+2; //makes it centered
-            space = space-1; //spaces it to the center
-            }
-        //stand of tree
+            i = i+1; // go to next height in tree
+            stars = stars+2; // add 2 more stars cause we're at the next height
+            space = space-1; // spaces it to the center
+        }
+        // once we're out of this while loop, stars == number of stars in last level + 2
+
+        stars = stars - 2;
+
+        // stand of tree
         int s = 0;
         while (s < 2){
-            printWhiteSpaces(size-1);
+            printWhiteSpaces((stars-3) / 2);
             Exercise39.printStars(3);
             s = s+1;
             System.out.println();
@@ -49,8 +59,8 @@ public class Exercise40 {
 
     public static void main(String[] args) {
         //printWhiteSpaces(5);
-        printTriangle(4);
-        //printXmasTree(10);
+        //printTriangle(4);
+        printXmasTree(10);
     }
 
 
